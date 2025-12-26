@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useData } from "../state/DataContext";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
@@ -18,37 +18,51 @@ function Items() {
   } = useData();
 
   const [error, setError] = useState(null);
+  const activeRequestControllerRef = useRef(null);
+
+  const getNewAbortSignal = () => {
+    // Cancel any existing in-flight request
+    if (activeRequestControllerRef.current) {
+      activeRequestControllerRef.current.abort();
+    }
+
+    const controller = new AbortController();
+    activeRequestControllerRef.current = controller;
+    return controller.signal;
+  };
 
   useEffect(() => {
-    // Create AbortController for this effect
-    const abortController = new AbortController();
     setError(null);
 
     // Initial fetch with pagination (page 1, 10 items per page)
-    fetchItems(
-      { page: 1, pageSize: 10, search: "" },
-      abortController.signal
-    ).catch((error) => {
-      if (error.name !== "AbortError" && !abortController.signal.aborted) {
-        setError(error.message);
-      }
-    });
+    const signal = getNewAbortSignal();
 
-    // Clean‑up to avoid memory leak - abort the fetch request
+    fetchItems({ page: 1, pageSize: 10, search: "" }, signal).catch(
+      (error) => {
+        if (error.name !== "AbortError" && !signal.aborted) {
+          setError(error.message);
+        }
+      }
+    );
+
+    // Clean-up to avoid memory leak - abort any in-flight fetch request
     return () => {
-      abortController.abort();
+      if (activeRequestControllerRef.current) {
+        activeRequestControllerRef.current.abort();
+      }
     };
   }, []); // Empty dependency array for initial load only
 
   const handleSearch = useCallback(
     async (query) => {
-      const abortController = new AbortController();
       setError(null);
 
+      const signal = getNewAbortSignal();
+
       try {
-        await searchItems(query, abortController.signal);
+        await searchItems(query, signal);
       } catch (error) {
-        if (error.name !== "AbortError") {
+        if (error.name !== "AbortError" && !signal.aborted) {
           setError(error.message);
         }
       }
@@ -58,13 +72,14 @@ function Items() {
 
   const handlePageChange = useCallback(
     async (newPage) => {
-      const abortController = new AbortController();
       setError(null);
 
+      const signal = getNewAbortSignal();
+
       try {
-        await changePage(newPage, abortController.signal);
+        await changePage(newPage, signal);
       } catch (error) {
-        if (error.name !== "AbortError") {
+        if (error.name !== "AbortError" && !signal.aborted) {
           setError(error.message);
         }
       }
@@ -74,13 +89,14 @@ function Items() {
 
   const handlePageSizeChange = useCallback(
     async (newPageSize) => {
-      const abortController = new AbortController();
       setError(null);
 
+      const signal = getNewAbortSignal();
+
       try {
-        await changePageSize(newPageSize, abortController.signal);
+        await changePageSize(newPageSize, signal);
       } catch (error) {
-        if (error.name !== "AbortError") {
+        if (error.name !== "AbortError" && !signal.aborted) {
           setError(error.message);
         }
       }
