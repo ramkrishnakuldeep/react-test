@@ -28,21 +28,65 @@ async function writeData(data) {
 
 // GET /api/items
 router.get('/', async (req, res, next) => {
-  try {
+  try {    
     const data = await readData();
-    const { limit, q } = req.query;
+    const { 
+      limit, 
+      q, 
+      page = 1, 
+      pageSize = 10 
+    } = req.query;
+        
     let results = data;
+    const totalItems = data.length;
 
+    // Apply search filter first
     if (q) {
-      // Simple substring search (sub‑optimal)
-      results = results.filter(item => item.name.toLowerCase().includes(q.toLowerCase()));
+      // Enhanced search: search in name, category, and description if available
+      const searchTerm = q.toLowerCase().trim();
+      results = results.filter(item => 
+        item.name.toLowerCase().includes(searchTerm) ||
+        (item.category && item.category.toLowerCase().includes(searchTerm)) ||
+        (item.description && item.description.toLowerCase().includes(searchTerm))
+      );
     }
 
-    if (limit) {
+    const totalFilteredItems = results.length;
+
+    // Apply pagination
+    const pageNum = Math.max(1, parseInt(page, 10));
+    const pageSizeNum = Math.max(1, Math.min(100, parseInt(pageSize, 10))); // Max 100 items per page
+    const startIndex = (pageNum - 1) * pageSizeNum;
+    const endIndex = startIndex + pageSizeNum;
+
+    const paginatedResults = results.slice(startIndex, endIndex);
+
+    // Calculate pagination metadata
+    const totalPages = Math.ceil(totalFilteredItems / pageSizeNum);
+    const hasNext = pageNum < totalPages;
+    const hasPrev = pageNum > 1;
+
+    // Legacy limit support (for backward compatibility)
+    if (limit && !req.query.page && !req.query.pageSize) {
       results = results.slice(0, parseInt(limit));
+      return res.json(results);
     }
-
-    res.json(results);
+    // Return paginated response with metadata
+    const response = {
+      items: paginatedResults,
+      pagination: {
+        page: pageNum,
+        pageSize: pageSizeNum,
+        totalItems: totalFilteredItems,
+        totalPages,
+        hasNext,
+        hasPrev,
+        totalItemsBeforeFilter: totalItems
+      },
+      search: q || null
+    };
+    
+    res.json(response);
   } catch (err) {
     next(err);
   }
