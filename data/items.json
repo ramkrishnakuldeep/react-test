@@ -1,77 +1,551 @@
 [
-  { "id": 1, "name": "Laptop Pro", "category": "Electronics", "price": 2499, "description": "High-performance laptop for professionals" },
-  { "id": 2, "name": "Noise Cancelling Headphones", "category": "Electronics", "price": 399, "description": "Premium wireless headphones with active noise cancellation" },
-  { "id": 3, "name": "Ultra‑Wide Monitor", "category": "Electronics", "price": 999, "description": "34-inch curved ultrawide monitor for productivity" },
-  { "id": 4, "name": "Ergonomic Chair", "category": "Furniture", "price": 799, "description": "Comfortable office chair with lumbar support" },
-  { "id": 5, "name": "Standing Desk", "category": "Furniture", "price": 1199, "description": "Adjustable height standing desk" },
-  { "id": 6, "name": "Wireless Mouse", "category": "Electronics", "price": 89, "description": "Precision wireless mouse with RGB lighting" },
-  { "id": 7, "name": "Mechanical Keyboard", "category": "Electronics", "price": 179, "description": "Cherry MX Blue switches mechanical keyboard" },
-  { "id": 8, "name": "Webcam 4K", "category": "Electronics", "price": 299, "description": "Ultra HD webcam for streaming and video calls" },
-  { "id": 9, "name": "Desk Lamp", "category": "Furniture", "price": 125, "description": "LED desk lamp with adjustable brightness" },
-  { "id": 10, "name": "Phone Stand", "category": "Accessories", "price": 25, "description": "Adjustable phone stand for desk" },
-  { "id": 11, "name": "Tablet Pro", "category": "Electronics", "price": 1099, "description": "Professional tablet with stylus support" },
-  { "id": 12, "name": "Smart Watch", "category": "Electronics", "price": 449, "description": "Fitness tracking smartwatch with GPS" },
-  { "id": 13, "name": "Bluetooth Speaker", "category": "Electronics", "price": 199, "description": "Portable waterproof Bluetooth speaker" },
-  { "id": 14, "name": "Office Bookshelf", "category": "Furniture", "price": 299, "description": "5-tier wooden bookshelf for office" },
-  { "id": 15, "name": "Cable Management Box", "category": "Accessories", "price": 45, "description": "Hide and organize cables on your desk" },
-  { "id": 16, "name": "Gaming Laptop", "category": "Electronics", "price": 1899, "description": "High-performance gaming laptop with RTX graphics" },
-  { "id": 17, "name": "Drawing Tablet", "category": "Electronics", "price": 349, "description": "Digital drawing tablet for artists and designers" },
-  { "id": 18, "name": "Monitor Arm", "category": "Accessories", "price": 129, "description": "Dual monitor arm for desk mounting" },
-  { "id": 19, "name": "Ergonomic Footrest", "category": "Furniture", "price": 79, "description": "Adjustable footrest for under-desk comfort" },
-  { "id": 20, "name": "Wireless Charger", "category": "Electronics", "price": 59, "description": "Fast wireless charging pad for smartphones" },
-  { "id": 21, "name": "Document Scanner", "category": "Electronics", "price": 249, "description": "Portable document scanner for digitizing papers" },
-  { "id": 22, "name": "Printer All-in-One", "category": "Electronics", "price": 399, "description": "Wireless all-in-one printer with scanner" },
-  { "id": 23, "name": "Desk Organizer", "category": "Accessories", "price": 35, "description": "Multi-compartment desk organizer" },
-  { "id": 24, "name": "Executive Chair", "category": "Furniture", "price": 1299, "description": "Luxury leather executive office chair" },
-  { "id": 25, "name": "USB Hub", "category": "Electronics", "price": 49, "description": "7-port USB 3.0 hub with power adapter" },
-  { "id": 26, "name": "Portable SSD", "category": "Electronics", "price": 199, "description": "1TB portable solid state drive" },
-  { "id": 27, "name": "Coffee Mug Warmer", "category": "Accessories", "price": 39, "description": "Electric mug warmer for your desk" },
-  { "id": 28, "name": "Whiteboard", "category": "Furniture", "price": 189, "description": "Large magnetic whiteboard for planning" },
-  { "id": 29, "name": "Noise Machine", "category": "Electronics", "price": 79, "description": "White noise machine for concentration" },
-  { "id": 30, "name": "Laptop Stand", "category": "Accessories", "price": 69, "description": "Adjustable aluminum laptop stand" },
-  { "id": 31, "name": "Gaming Mouse", "category": "Electronics", "price": 129, "description": "High-DPI gaming mouse with programmable buttons" },
-  { "id": 32, "name": "Desk Pad", "category": "Accessories", "price": 29, "description": "Large desk pad mousepad for keyboard and mouse" },
-  { "id": 33, "name": "Air Purifier", "category": "Electronics", "price": 299, "description": "HEPA air purifier for office spaces" },
-  { "id": 34, "name": "Filing Cabinet", "category": "Furniture", "price": 249, "description": "4-drawer locking filing cabinet" },
-  { "id": 35, "name": "Surge Protector", "category": "Electronics", "price": 59, "description": "12-outlet surge protector with USB ports" },
-  { "id": 36, "name": "Desk Calendar", "category": "Accessories", "price": 19, "description": "Large desk calendar for planning" },
-  { "id": 37, "name": "Pen Holder", "category": "Accessories", "price": 15, "description": "Wooden pen and pencil holder" },
-  { "id": 38, "name": "Memory Foam Cushion", "category": "Furniture", "price": 89, "description": "Memory foam seat cushion for chair comfort" },
-  { "id": 39, "name": "External Hard Drive", "category": "Electronics", "price": 149, "description": "4TB external hard drive for backup" },
-  { "id": 40, "name": "Desk Mirror", "category": "Accessories", "price": 25, "description": "Small adjustable mirror for desk" },
-  { "id": 41, "name": "Trackball Mouse", "category": "Electronics", "price": 99, "description": "Ergonomic trackball mouse for RSI prevention" },
-  { "id": 42, "name": "Plant Pot", "category": "Accessories", "price": 32, "description": "Ceramic pot with drainage for desk plants" },
-  { "id": 43, "name": "Stress Ball", "category": "Accessories", "price": 8, "description": "Squeeze stress ball for tension relief" },
-  { "id": 44, "name": "Adjustable Monitor Stand", "category": "Accessories", "price": 85, "description": "Height-adjustable monitor stand with storage" },
-  { "id": 45, "name": "Wireless Presenter", "category": "Electronics", "price": 45, "description": "Wireless presenter remote with laser pointer" },
-  { "id": 46, "name": "Desk Fan", "category": "Electronics", "price": 65, "description": "Quiet desktop fan for personal cooling" },
-  { "id": 47, "name": "Cable Clips", "category": "Accessories", "price": 12, "description": "Set of cable clips for desk organization" },
-  { "id": 48, "name": "Lumbar Support Pillow", "category": "Furniture", "price": 55, "description": "Ergonomic lumbar support pillow for chairs" },
-  { "id": 49, "name": "Digital Frame", "category": "Electronics", "price": 179, "description": "WiFi digital photo frame for desk display" },
-  { "id": 50, "name": "Wrist Rest Pad", "category": "Accessories", "price": 22, "description": "Gel wrist rest for keyboard and mouse" },
-  { "id": 51, "name": "Conference Camera", "category": "Electronics", "price": 599, "description": "4K conference camera with auto-tracking" },
-  { "id": 52, "name": "Shredder", "category": "Electronics", "price": 199, "description": "Cross-cut paper shredder for security" },
-  { "id": 53, "name": "Desk Shelf", "category": "Furniture", "price": 89, "description": "Floating shelf for above desk storage" },
-  { "id": 54, "name": "Task Light", "category": "Electronics", "price": 149, "description": "Adjustable LED task light with dimmer" },
-  { "id": 55, "name": "Foot Warmer", "category": "Electronics", "price": 79, "description": "Electric foot warmer for cold offices" },
-  { "id": 56, "name": "Wall Clock", "category": "Accessories", "price": 45, "description": "Silent wall clock for office timing" },
-  { "id": 57, "name": "Desk Drawer", "category": "Furniture", "price": 129, "description": "Under-desk drawer for additional storage" },
-  { "id": 58, "name": "Laptop Cooling Pad", "category": "Electronics", "price": 59, "description": "Cooling pad with fans for laptops" },
-  { "id": 59, "name": "Stapler", "category": "Accessories", "price": 18, "description": "Heavy-duty stapler for office use" },
-  { "id": 60, "name": "Paper Tray", "category": "Accessories", "price": 24, "description": "Stackable paper tray for documents" },
-  { "id": 61, "name": "Gaming Headset", "category": "Electronics", "price": 199, "description": "Surround sound gaming headset with mic" },
-  { "id": 62, "name": "Ergonomic Mouse Pad", "category": "Accessories", "price": 35, "description": "Gel wrist support mouse pad" },
-  { "id": 63, "name": "Mini Fridge", "category": "Electronics", "price": 249, "description": "Compact mini fridge for office beverages" },
-  { "id": 64, "name": "Tissue Box Holder", "category": "Accessories", "price": 16, "description": "Wooden tissue box holder for desk" },
-  { "id": 65, "name": "Bluetooth Keyboard", "category": "Electronics", "price": 129, "description": "Slim wireless Bluetooth keyboard" },
-  { "id": 66, "name": "Document Holder", "category": "Accessories", "price": 28, "description": "Adjustable document holder for typing" },
-  { "id": 67, "name": "Power Bank", "category": "Electronics", "price": 79, "description": "High-capacity power bank for devices" },
-  { "id": 68, "name": "Coat Rack", "category": "Furniture", "price": 99, "description": "Wooden coat rack for office entrance" },
-  { "id": 69, "name": "USB Microphone", "category": "Electronics", "price": 189, "description": "Professional USB microphone for podcasting" },
-  { "id": 70, "name": "Keyboard Tray", "category": "Accessories", "price": 75, "description": "Under-desk keyboard tray with mouse pad" },
-  { "id": 71, "name": "Reading Glasses", "category": "Accessories", "price": 29, "description": "Blue light blocking reading glasses" },
-  { "id": 72, "name": "Desk Humidifier", "category": "Electronics", "price": 89, "description": "Ultrasonic desk humidifier for air quality" },
-  { "id": 73, "name": "Label Maker", "category": "Electronics", "price": 69, "description": "Portable label maker for organization" },
-  { "id": 74, "name": "Monitor Light Bar", "category": "Electronics", "price": 119, "description": "Screen light bar to reduce eye strain" },
-  { "id": 75, "name": "Ergonomic Keyboard", "category": "Electronics", "price": 199, "description": "Split ergonomic keyboard for comfort" }
+  {
+    "id": 1,
+    "name": "Laptop Pro",
+    "category": "Electronics",
+    "price": 2499,
+    "description": "High-performance laptop for professionals"
+  },
+  {
+    "id": 2,
+    "name": "Noise Cancelling Headphones",
+    "category": "Electronics",
+    "price": 399,
+    "description": "Premium wireless headphones with active noise cancellation"
+  },
+  {
+    "id": 3,
+    "name": "Ultra‑Wide Monitor",
+    "category": "Electronics",
+    "price": 999,
+    "description": "34-inch curved ultrawide monitor for productivity"
+  },
+  {
+    "id": 4,
+    "name": "Ergonomic Chair",
+    "category": "Furniture",
+    "price": 799,
+    "description": "Comfortable office chair with lumbar support"
+  },
+  {
+    "id": 5,
+    "name": "Standing Desk",
+    "category": "Furniture",
+    "price": 1199,
+    "description": "Adjustable height standing desk"
+  },
+  {
+    "id": 6,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 89,
+    "description": "Precision wireless mouse with RGB lighting"
+  },
+  {
+    "id": 7,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 179,
+    "description": "Cherry MX Blue switches mechanical keyboard"
+  },
+  {
+    "id": 8,
+    "name": "Webcam 4K",
+    "category": "Electronics",
+    "price": 299,
+    "description": "Ultra HD webcam for streaming and video calls"
+  },
+  {
+    "id": 9,
+    "name": "Desk Lamp",
+    "category": "Furniture",
+    "price": 125,
+    "description": "LED desk lamp with adjustable brightness"
+  },
+  {
+    "id": 10,
+    "name": "Phone Stand",
+    "category": "Accessories",
+    "price": 25,
+    "description": "Adjustable phone stand for desk"
+  },
+  {
+    "id": 11,
+    "name": "Tablet Pro",
+    "category": "Electronics",
+    "price": 1099,
+    "description": "Professional tablet with stylus support"
+  },
+  {
+    "id": 12,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 449,
+    "description": "Fitness tracking smartwatch with GPS"
+  },
+  {
+    "id": 13,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 199,
+    "description": "Portable waterproof Bluetooth speaker"
+  },
+  {
+    "id": 14,
+    "name": "Office Bookshelf",
+    "category": "Furniture",
+    "price": 299,
+    "description": "5-tier wooden bookshelf for office"
+  },
+  {
+    "id": 15,
+    "name": "Cable Management Box",
+    "category": "Accessories",
+    "price": 45,
+    "description": "Hide and organize cables on your desk"
+  },
+  {
+    "id": 16,
+    "name": "Gaming Laptop",
+    "category": "Electronics",
+    "price": 1899,
+    "description": "High-performance gaming laptop with RTX graphics"
+  },
+  {
+    "id": 17,
+    "name": "Drawing Tablet",
+    "category": "Electronics",
+    "price": 349,
+    "description": "Digital drawing tablet for artists and designers"
+  },
+  {
+    "id": 18,
+    "name": "Monitor Arm",
+    "category": "Accessories",
+    "price": 129,
+    "description": "Dual monitor arm for desk mounting"
+  },
+  {
+    "id": 19,
+    "name": "Ergonomic Footrest",
+    "category": "Furniture",
+    "price": 79,
+    "description": "Adjustable footrest for under-desk comfort"
+  },
+  {
+    "id": 20,
+    "name": "Wireless Charger",
+    "category": "Electronics",
+    "price": 59,
+    "description": "Fast wireless charging pad for smartphones"
+  },
+  {
+    "id": 21,
+    "name": "Document Scanner",
+    "category": "Electronics",
+    "price": 249,
+    "description": "Portable document scanner for digitizing papers"
+  },
+  {
+    "id": 22,
+    "name": "Printer All-in-One",
+    "category": "Electronics",
+    "price": 399,
+    "description": "Wireless all-in-one printer with scanner"
+  },
+  {
+    "id": 23,
+    "name": "Desk Organizer",
+    "category": "Accessories",
+    "price": 35,
+    "description": "Multi-compartment desk organizer"
+  },
+  {
+    "id": 24,
+    "name": "Executive Chair",
+    "category": "Furniture",
+    "price": 1299,
+    "description": "Luxury leather executive office chair"
+  },
+  {
+    "id": 25,
+    "name": "USB Hub",
+    "category": "Electronics",
+    "price": 49,
+    "description": "7-port USB 3.0 hub with power adapter"
+  },
+  {
+    "id": 26,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "price": 199,
+    "description": "1TB portable solid state drive"
+  },
+  {
+    "id": 27,
+    "name": "Coffee Mug Warmer",
+    "category": "Accessories",
+    "price": 39,
+    "description": "Electric mug warmer for your desk"
+  },
+  {
+    "id": 28,
+    "name": "Whiteboard",
+    "category": "Furniture",
+    "price": 189,
+    "description": "Large magnetic whiteboard for planning"
+  },
+  {
+    "id": 29,
+    "name": "Noise Machine",
+    "category": "Electronics",
+    "price": 79,
+    "description": "White noise machine for concentration"
+  },
+  {
+    "id": 30,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "price": 69,
+    "description": "Adjustable aluminum laptop stand"
+  },
+  {
+    "id": 31,
+    "name": "Gaming Mouse",
+    "category": "Electronics",
+    "price": 129,
+    "description": "High-DPI gaming mouse with programmable buttons"
+  },
+  {
+    "id": 32,
+    "name": "Desk Pad",
+    "category": "Accessories",
+    "price": 29,
+    "description": "Large desk pad mousepad for keyboard and mouse"
+  },
+  {
+    "id": 33,
+    "name": "Air Purifier",
+    "category": "Electronics",
+    "price": 299,
+    "description": "HEPA air purifier for office spaces"
+  },
+  {
+    "id": 34,
+    "name": "Filing Cabinet",
+    "category": "Furniture",
+    "price": 249,
+    "description": "4-drawer locking filing cabinet"
+  },
+  {
+    "id": 35,
+    "name": "Surge Protector",
+    "category": "Electronics",
+    "price": 59,
+    "description": "12-outlet surge protector with USB ports"
+  },
+  {
+    "id": 36,
+    "name": "Desk Calendar",
+    "category": "Accessories",
+    "price": 19,
+    "description": "Large desk calendar for planning"
+  },
+  {
+    "id": 37,
+    "name": "Pen Holder",
+    "category": "Accessories",
+    "price": 15,
+    "description": "Wooden pen and pencil holder"
+  },
+  {
+    "id": 38,
+    "name": "Memory Foam Cushion",
+    "category": "Furniture",
+    "price": 89,
+    "description": "Memory foam seat cushion for chair comfort"
+  },
+  {
+    "id": 39,
+    "name": "External Hard Drive",
+    "category": "Electronics",
+    "price": 149,
+    "description": "4TB external hard drive for backup"
+  },
+  {
+    "id": 40,
+    "name": "Desk Mirror",
+    "category": "Accessories",
+    "price": 25,
+    "description": "Small adjustable mirror for desk"
+  },
+  {
+    "id": 41,
+    "name": "Trackball Mouse",
+    "category": "Electronics",
+    "price": 99,
+    "description": "Ergonomic trackball mouse for RSI prevention"
+  },
+  {
+    "id": 42,
+    "name": "Plant Pot",
+    "category": "Accessories",
+    "price": 32,
+    "description": "Ceramic pot with drainage for desk plants"
+  },
+  {
+    "id": 43,
+    "name": "Stress Ball",
+    "category": "Accessories",
+    "price": 8,
+    "description": "Squeeze stress ball for tension relief"
+  },
+  {
+    "id": 44,
+    "name": "Adjustable Monitor Stand",
+    "category": "Accessories",
+    "price": 85,
+    "description": "Height-adjustable monitor stand with storage"
+  },
+  {
+    "id": 45,
+    "name": "Wireless Presenter",
+    "category": "Electronics",
+    "price": 45,
+    "description": "Wireless presenter remote with laser pointer"
+  },
+  {
+    "id": 46,
+    "name": "Desk Fan",
+    "category": "Electronics",
+    "price": 65,
+    "description": "Quiet desktop fan for personal cooling"
+  },
+  {
+    "id": 47,
+    "name": "Cable Clips",
+    "category": "Accessories",
+    "price": 12,
+    "description": "Set of cable clips for desk organization"
+  },
+  {
+    "id": 48,
+    "name": "Lumbar Support Pillow",
+    "category": "Furniture",
+    "price": 55,
+    "description": "Ergonomic lumbar support pillow for chairs"
+  },
+  {
+    "id": 49,
+    "name": "Digital Frame",
+    "category": "Electronics",
+    "price": 179,
+    "description": "WiFi digital photo frame for desk display"
+  },
+  {
+    "id": 50,
+    "name": "Wrist Rest Pad",
+    "category": "Accessories",
+    "price": 22,
+    "description": "Gel wrist rest for keyboard and mouse"
+  },
+  {
+    "id": 51,
+    "name": "Conference Camera",
+    "category": "Electronics",
+    "price": 599,
+    "description": "4K conference camera with auto-tracking"
+  },
+  {
+    "id": 52,
+    "name": "Shredder",
+    "category": "Electronics",
+    "price": 199,
+    "description": "Cross-cut paper shredder for security"
+  },
+  {
+    "id": 53,
+    "name": "Desk Shelf",
+    "category": "Furniture",
+    "price": 89,
+    "description": "Floating shelf for above desk storage"
+  },
+  {
+    "id": 54,
+    "name": "Task Light",
+    "category": "Electronics",
+    "price": 149,
+    "description": "Adjustable LED task light with dimmer"
+  },
+  {
+    "id": 55,
+    "name": "Foot Warmer",
+    "category": "Electronics",
+    "price": 79,
+    "description": "Electric foot warmer for cold offices"
+  },
+  {
+    "id": 56,
+    "name": "Wall Clock",
+    "category": "Accessories",
+    "price": 45,
+    "description": "Silent wall clock for office timing"
+  },
+  {
+    "id": 57,
+    "name": "Desk Drawer",
+    "category": "Furniture",
+    "price": 129,
+    "description": "Under-desk drawer for additional storage"
+  },
+  {
+    "id": 58,
+    "name": "Laptop Cooling Pad",
+    "category": "Electronics",
+    "price": 59,
+    "description": "Cooling pad with fans for laptops"
+  },
+  {
+    "id": 59,
+    "name": "Stapler",
+    "category": "Accessories",
+    "price": 18,
+    "description": "Heavy-duty stapler for office use"
+  },
+  {
+    "id": 60,
+    "name": "Paper Tray",
+    "category": "Accessories",
+    "price": 24,
+    "description": "Stackable paper tray for documents"
+  },
+  {
+    "id": 61,
+    "name": "Gaming Headset",
+    "category": "Electronics",
+    "price": 199,
+    "description": "Surround sound gaming headset with mic"
+  },
+  {
+    "id": 62,
+    "name": "Ergonomic Mouse Pad",
+    "category": "Accessories",
+    "price": 35,
+    "description": "Gel wrist support mouse pad"
+  },
+  {
+    "id": 63,
+    "name": "Mini Fridge",
+    "category": "Electronics",
+    "price": 249,
+    "description": "Compact mini fridge for office beverages"
+  },
+  {
+    "id": 64,
+    "name": "Tissue Box Holder",
+    "category": "Accessories",
+    "price": 16,
+    "description": "Wooden tissue box holder for desk"
+  },
+  {
+    "id": 65,
+    "name": "Bluetooth Keyboard",
+    "category": "Electronics",
+    "price": 129,
+    "description": "Slim wireless Bluetooth keyboard"
+  },
+  {
+    "id": 66,
+    "name": "Document Holder",
+    "category": "Accessories",
+    "price": 28,
+    "description": "Adjustable document holder for typing"
+  },
+  {
+    "id": 67,
+    "name": "Power Bank",
+    "category": "Electronics",
+    "price": 79,
+    "description": "High-capacity power bank for devices"
+  },
+  {
+    "id": 68,
+    "name": "Coat Rack",
+    "category": "Furniture",
+    "price": 99,
+    "description": "Wooden coat rack for office entrance"
+  },
+  {
+    "id": 69,
+    "name": "USB Microphone",
+    "category": "Electronics",
+    "price": 189,
+    "description": "Professional USB microphone for podcasting"
+  },
+  {
+    "id": 70,
+    "name": "Keyboard Tray",
+    "category": "Accessories",
+    "price": 75,
+    "description": "Under-desk keyboard tray with mouse pad"
+  },
+  {
+    "id": 71,
+    "name": "Reading Glasses",
+    "category": "Accessories",
+    "price": 29,
+    "description": "Blue light blocking reading glasses"
+  },
+  {
+    "id": 72,
+    "name": "Desk Humidifier",
+    "category": "Electronics",
+    "price": 89,
+    "description": "Ultrasonic desk humidifier for air quality"
+  },
+  {
+    "id": 73,
+    "name": "Label Maker",
+    "category": "Electronics",
+    "price": 69,
+    "description": "Portable label maker for organization"
+  },
+  {
+    "id": 74,
+    "name": "Monitor Light Bar",
+    "category": "Electronics",
+    "price": 119,
+    "description": "Screen light bar to reduce eye strain"
+  },
+  {
+    "id": 75,
+    "name": "Ergonomic Keyboard",
+    "category": "Electronics",
+    "price": 199,
+    "description": "Split ergonomic keyboard for comfort"
+  },
+  {
+    "name": "Test Item",
+    "category": "Test",
+    "price": 9.99,
+    "id": 1766742101455
+  },
+  {
+    "name": "Test Item",
+    "category": "Test",
+    "price": 9.99,
+    "id": 1766742181042
+  },
+  {
+    "name": "Test Item",
+    "category": "Test",
+    "price": 9.99,
+    "id": 1766742198152
+  },
+  {
+    "name": "Test Item",
+    "category": "Test",
+    "price": 9.99,
+    "id": 1766742283128
+  }
 ]
